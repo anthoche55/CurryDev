@@ -1,0 +1,15 @@
+{
+  "name": "CurryDev",
+  "description": "CurryDev",
+  "version": "0.0.1",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "ms": "2.1.1",
+    "util": "0.11.0",
+    "fs": "7.0.0"
+  }
+}
