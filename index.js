@@ -3,6 +3,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+const {area, perimeter} = require('npm-helloworld-testttt')
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -22,6 +23,8 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} est en ligne sur ${bot.guilds.size} serveurs!`);
+  console.log(area(1))
+  console.log(perimeter(0.5))
 });
 
 
