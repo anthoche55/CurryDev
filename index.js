@@ -22,6 +22,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} est en ligne sur ${bot.guilds.size} serveurs!`);
+  client.user.setPresence({ game: { name: `c&help | ${client.guilds.size} serveurs | ${client.users.size} membres`, type: 0 }});
 });
 
 
