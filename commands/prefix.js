@@ -3,7 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
 
-  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("Non, tu n\'es pas autorisé à faire cette commande !!!");
+  if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Non, tu n\'es pas autorisé à faire cette commande !!!");
   if(!args[0] || args[0 == "help"]) return message.reply("Utilisation: !prefix <préfix>");
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
