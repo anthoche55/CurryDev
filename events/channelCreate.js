@@ -2,20 +2,20 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 
 module.exports = (channel, message) => {
-  let auditlogchannel = channel.guild.channels.find('name', 'audit-log');
-  if (!auditlogchannel) return;
+  let logchannel = channel.guild.channels.find('name', 'logs');
+  if (!logchannel) return;
 
   let createdAtRaw = channel.createdAt.toDateString();
   let createdAt = createdAtRaw.split(" ");
 
   let embed = new Discord.RichEmbed()
-  .setTitle('Channel has been created!')
-  .setColor(config.green)
-  .addField('Channel Name', `${channel.name}`, true)
-  .addField('Channel Type', `${channel.type}`, true)
-  .addField('Created At', `${createdAt[0]} ${createdAt[2]} ${createdAt[1]}`)
-  auditlogchannel.send(embed);
+  .setTitle('Un salon a été créé')
+  .setColor(config.vert)
+  .addField('Nom du salon', `${channel.name}`, true)
+  .addField('Type du salon', `${channel.type}`, true)
+  .addField('Créé le', `${createdAt[0]} ${createdAt[2]} ${createdAt[1]}`)
+  logchannel.send({ embed: embed });
 
-  console.log(`[${channel.guild}] The channel ${channel.name} has been created.`);
+  console.log(`[${channel.guild}] Le salon ${channel.name} a été créé.`);
   return
 }
