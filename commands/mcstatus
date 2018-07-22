@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) => {
   let embed = new Discord.RichEmbed()
   .setTitle(`Information sur ${mcIP}`)
   .setThumbnail('https://vignette.wikia.nocookie.net/minecraftpocketedition/images/f/f1/Minecraft_1.2_Logo.png/revision/latest?cb=20171204231225')
-  .setColor(body.online ? config.green : config.red)
+  .setColor(0x71f442)
   .addField('Serveur en ligne', status)
   .addField('Joueurs connectés', body.players.now, true)
   .addField('Max de joueurs', body.players.max, true);
