@@ -1,0 +1,15 @@
+{
+  "ownerid": "252873409401323520",
+
+  "swearfilter": false,
+  "discordinvite": true,
+  "tweetcommand": false,
+
+  "blanc": "#ffffff",
+  "rouge": "#ff0000",
+  "orange": "#ffa500",
+  "jaune": "#ffff00",
+  "vert": "#00ff00",
+  "bleu": "#0000ff",
+  "violet": "#551a8b"
+}
