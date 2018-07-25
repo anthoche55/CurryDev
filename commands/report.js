@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Temps", message.createdAt)
     .addField("Reason", rreason);
 
-    message.reply("Tu as bien report ${rUser}")
+    message.reply(`Tu as bien report ${rUser}`)
     let reportschannel = message.guild.channels.find(`name`, "logs");
     if(!reportschannel) return message.channel.send("Je ne peux pas trouver le salon #logs");
 
