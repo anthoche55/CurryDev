@@ -60,3 +60,7 @@ let xoargs = message.content.split(" ").slice(1);
 		}	
 	}
 }
+
+module.exports.help = {
+  name: "vcs"
+}
