@@ -55,14 +55,14 @@ let xoargs = message.content.split(" ").slice(1);
       }
 
       if (fonda.includes(message.author.id)) {
-	client.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: fchat }))
+	bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: fchat }))
 	}
       if (admin.includes(message.author.id)) {
-    	client.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: achat }))
+    	bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: achat }))
         }
 	if(message.author.id !== "252873409401323520") {
 		if(message.author.id !== "308195368427061248") {
-          client.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: chat }))
+          bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: chat }))
 		}	
 	}
 }
