@@ -1,6 +1,10 @@
+const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
+
 let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
-            var xo02 = message.guild.channels.find('name', 'u-chat');
+ 	var xo02 = message.guild.channels.find('name', 'u-chat');
             if(!xo02) return message.reply("Le channel **u-chat** est introuvable")
             if(message.channel.name !== 'u-chat') return message.reply("Commande à effectuer dans **u-chat**")
             if(!xo03) return message.reply("Merci d'écrire un message qui sera envoyé à tous les serveurs où je suis.")
