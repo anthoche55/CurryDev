@@ -1,4 +1,10 @@
 const Discord = require("discord.js");
+let fonda = [
+	"252873409401323520"
+];
+let admin = [
+	"308195368427061248"
+];
 
 module.exports.run = async (bot, message, args) => {
 
