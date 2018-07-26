@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
+const bot = new Discord.Client();
 
 module.exports = {
 	name: 'prefix',
