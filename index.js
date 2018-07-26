@@ -3,7 +3,7 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 const client = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-let prefix = "&";
+const prefix = "&";
 const {area, perimeter} = require('npm-helloworld-testttt')
 
 fs.readdir("./commands/", (err, files) => {
