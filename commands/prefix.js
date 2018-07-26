@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'prefix',
 	description: '&prefix',
-	execute(message, args) {
+	execute(message, args, fs) {
 
   if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Non, tu n\'es pas autorisé à faire cette commande !!!");
   if(!args[0] || args[0 == "help"]) return message.reply("Utilisation: !prefix <préfix>");
