@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const prefix = "&";
-const bot = new Discord.bot();
+const bot = new Discord.Client();
 
 bot.commands = new Discord.Collection();
 
