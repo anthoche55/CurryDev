@@ -1,7 +1,7 @@
-const Discord = require("discord.js");
-const fs = require("fs");
-
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	name: 'prefix',
+	description: '&prefix',
+	execute(message) {
 
   if(!message.member.hasPermission("MANAGE_GUILD")) return message.reply("Non, tu n\'es pas autorisé à faire cette commande !!!");
   if(!args[0] || args[0 == "help"]) return message.reply("Utilisation: !prefix <préfix>");
@@ -23,8 +23,6 @@ module.exports.run = async (bot, message, args) => {
 
   message.channel.send(sEmbed);
 
-}
 
-module.exports.help = {
-  name: "prefix"
-}
+	},
+};
