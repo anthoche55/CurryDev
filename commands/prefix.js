@@ -25,6 +25,15 @@ module.exports = {
   .setDescription(`Prefix: ${args[0]}`);
 
   message.channel.send(sEmbed);
+		
+		
+bot.on('uncaughtException', (err) => {
+    console.log("error", "Uncaught Exception", err);
+});
+
+process.on("unhandledRejection", (err) => {
+    console.log("Uncaught Promise Error", err);
+});
 
 
 	},
