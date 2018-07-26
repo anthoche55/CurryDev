@@ -14,8 +14,6 @@ for (const file of commandFiles) {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} est en ligne sur ${bot.guilds.size} serveurs!`);
-  console.log(area(1))
-  console.log(perimeter(0.5))
 });
 
 bot.login(process.env.BOT_TOKEN);
