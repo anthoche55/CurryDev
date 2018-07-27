@@ -1,7 +1,11 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
-module.exports.run = async (bot, message, args) => {
-
+module.exports = {
+	name: 'prefix',
+	description: '&prefix',
+	execute(message, args) {
+    
   //!addrole @andrew Dog Person
   if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("Désolé, tu n\'as pas la permission d'éxecuter cette commande.");
   let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
@@ -20,8 +24,6 @@ module.exports.run = async (bot, message, args) => {
     console.log(e.stack);
     message.channel.send(`<@${rMember.id}> a reçu le rôle ${gRole.name}. J\'ai essayé de lui envoyer un mp mais il les a bloqué.`)
   }
-}
+	},
+};}
 
-module.exports.help = {
-  name: "addrole"
-}
