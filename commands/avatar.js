@@ -1,6 +1,11 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const bot = new Discord.Client();
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	name: 'avatar',
+	description: '&avatar',
+	execute(message, args) {
+                
         let user = message.mentions.users.first();
         let image = user.displayAvatarURL;
         let embed = new Discord.RichEmbed()
@@ -8,8 +13,5 @@ module.exports.run = async (bot, message, args) => {
             .setColor("RANDOM")
             .setImage(image)
         message.channel.send({ embed: embed });
-}
-
-module.exports.help = {
-  name:"avatar"
-}
+},
+};
