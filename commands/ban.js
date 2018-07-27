@@ -1,6 +1,8 @@
-const Discord = require("discord.js");
-
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	name: 'beep',
+	description: 'Beep!',
+	execute(message) {
+        
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Je ne sais pas trouver cette personne");
     let bReason = args.join(" ").slice(22);
@@ -21,8 +23,5 @@ module.exports.run = async (bot, message, args) => {
 
     message.guild.member(bUser).ban(bReason);
     incidentchannel.send(banEmbed);
-}
-
-module.exports.help = {
-  name:"ban"
-}
+       },
+};
