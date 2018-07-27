@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'beep',
-	description: 'Beep!',
+	name: 'ban',
+	description: '&ban',
 	execute(message) {
         
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
