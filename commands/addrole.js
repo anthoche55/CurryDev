@@ -25,5 +25,5 @@ module.exports = {
     message.channel.send(`<@${rMember.id}> a reçu le rôle ${gRole.name}. J\'ai essayé de lui envoyer un mp mais il les a bloqué.`)
   }
 	},
-};}
+};
 
