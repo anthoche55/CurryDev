@@ -6,8 +6,8 @@ module.exports = {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Je ne sais pas trouver cette personne");
     let bReason = args.join(" ").slice(22);
-    if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("Tu n\'as pas la permission");
-    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Je ne peux pas ban cette personne");
+    if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("Tu n\'as pas la permission");
+    if(bUser.hasPermission("BAN_MEMBERS")) return message.channel.send("Je ne peux pas ban cette personne");
 
     let banEmbed = new Discord.RichEmbed()
     .setDescription("~Ban~")
