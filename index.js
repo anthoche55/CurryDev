@@ -54,13 +54,6 @@ bot.on('message', async message => {
 		setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
 	}
 
-	try {
-		command.execute(message, args);
-	}
-	catch (error) {
-		console.error(error);
-		message.reply('Il y a eu une erreure avec l\'execution de la commande. L\'erreure la plus probable est que tu n\'as pas mis d\'arguments');
-	}
 });
 
 bot.login(process.env.BOT_TOKEN);
