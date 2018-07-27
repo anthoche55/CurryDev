@@ -27,21 +27,8 @@ bot.on('message', async message => {
 	const command = bot.commands.get(commandName)
 		|| bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
+
 	if (!command) return;
-
-	if (command.guildOnly && message.channel.type !== 'text') {
-		return message.reply('Je ne peux pas executer cette commande en MP!');
-	}
-
-	if (command.args && !args.length) {
-		let reply = `Tu n\'as mis aucun argument, ${message.author}!`;
-
-		if (command.usage) {
-			reply += `\nL\'utilisation est: \`${prefix}${command.name} ${command.usage}\``;
-		}
-
-		return message.channel.send(reply);
-	}
 
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
