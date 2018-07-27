@@ -72,7 +72,7 @@ bot.on('message', async message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('Il y a eu une erreure avec l\'execution de la commande.');
+		message.reply('Il y a eu une erreure avec l\'execution de la commande. L\'erreure la plus probable est que tu n\'as pas mis d\'arguments');
 	}
 });
 
