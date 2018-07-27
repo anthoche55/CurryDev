@@ -18,7 +18,7 @@ bot.on('ready', () => {
 	console.log('Prêt!');
 });
 
-bot.on('message', message => {
+bot.on('message', async message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
