@@ -16,6 +16,7 @@ const cooldowns = new Discord.Collection();
 
 bot.on('ready', () => {
 	console.log('Prêt!');
+	client.user.setActivity(`&help | ${client.guilds.size}`, { type: 'WATCHING' })
 });
 
 bot.on('message', async message => {
