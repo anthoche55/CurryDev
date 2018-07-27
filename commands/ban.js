@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'ban',
 	description: '&ban',
-	execute(message) {
+	execute(message, args) {
         
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!bUser) return message.channel.send("Je ne sais pas trouver cette personne");
