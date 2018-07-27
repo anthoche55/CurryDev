@@ -6,6 +6,7 @@ module.exports = {
 	description: '&avatar',
 	execute(message, args) {
                 
+	if(!args) return message.reply("Mentionne une personne pour voir son avatar")
         let user = message.mentions.users.first();
         let image = user.displayAvatarURL;
         let embed = new Discord.RichEmbed()
