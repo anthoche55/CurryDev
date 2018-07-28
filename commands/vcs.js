@@ -6,8 +6,8 @@ let admin = [
 	"308195368427061248"
 ];
 module.exports = {
-	name: 'args-info',
-	description: 'Information about the arguments provided.',
+	name: 'vcs',
+	description: '&vcs',
 	execute(message, args) {
 let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
