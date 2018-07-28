@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const bot = new Discord.Client();
 let fonda = [
 	"252873409401323520"
 ];
