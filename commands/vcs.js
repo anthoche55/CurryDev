@@ -5,9 +5,10 @@ let fonda = [
 let admin = [
 	"308195368427061248"
 ];
-
-module.exports.run = async (bot, message, args) => {
-
+module.exports = {
+	name: 'args-info',
+	description: 'Information about the arguments provided.',
+	execute(message, args) {
 let xoargs = message.content.split(" ").slice(1);
             let xo03 = xoargs.join(" ")
  	var xo02 = message.guild.channels.find('name', 'u-chat');
@@ -65,8 +66,5 @@ let xoargs = message.content.split(" ").slice(1);
           bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: chat }))
 		}	
 	}
-}
-
-module.exports.help = {
-  name: "vcs"
-}
+},
+};
