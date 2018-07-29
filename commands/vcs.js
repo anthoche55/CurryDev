@@ -57,7 +57,7 @@ let xoargs = message.content.split(" ").slice(1);
       }
 
       if (fonda.includes(message.author.id)) {
-	bot.channels.findAll('name', 'u-chat').send({ embed: fchat })
+	bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: fchat }))
 	}
       if (admin.includes(message.author.id)) {
     	bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: achat }))
