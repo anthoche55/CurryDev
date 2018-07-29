@@ -67,5 +67,5 @@ let xoargs = message.content.split(" ").slice(1);
           bot.channels.findAll('name', 'u-chat').map(channel => channel.send({ embed: chat }))
 		}	
 	}
-},
+}
 };
